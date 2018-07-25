@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <test-store msg="Welcome to Your Vue.js App"></test-store>
+    <br/>
+    <alias-field :fieldName='aliasFieldName'></alias-field>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import TestStore from '@/components/TestStore.vue'
+// import AliasField from '@/components/AliasField.vue'
+import AliasField from '@/components/AliasField.vue'
 
 export default {
-  name: 'home',
   components: {
-    HelloWorld
-  }
+    TestStore,
+    AliasField
+  },
+
+  data () {
+    return {
+      aliasFieldName: 'Alias',
+      nameFieldName: 'Name'
+    }
+  },
+
 }
 </script>
