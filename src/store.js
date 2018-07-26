@@ -14,6 +14,11 @@ export default new Vuex.Store({
       {"alias": "Ant"}, 
       {"alias": "Bee"}, 
       {"alias": "Cow"}
+    ],
+    testformData: [
+      {"name": "Duncan Smith"}, 
+      {"mobile": "07764 615 516"}, 
+      {"email": "duncanssmith@gmail.com"} 
     ]
   },
 
@@ -33,6 +38,10 @@ export default new Vuex.Store({
     deleteAlias (state, data) {
       console.log('Final', data)
       state.aliases.splice(data, 1)
+    },
+    setTestFormData (state, data) {
+      console.log('Set test form data')
+      state.testformData.push(data)
     }
   },
 
@@ -48,6 +57,9 @@ export default new Vuex.Store({
     },
     getAliases (state) {
       return state.aliases
+    },
+    getTestFormItems (state) {
+      return state.testformData
     }
   },
 
@@ -80,6 +92,14 @@ export default new Vuex.Store({
       let id = param;
       console.log('removeAlias action', param, id)
       commit('deleteAlias', id)
+    },
+    processForm ({state, commit}, params) {
+      let testform = params;
+      console.log('Process Form: ', testform)
+      commit('setTestFormData', testform.name)
+      commit('setTestFormData', testform.mobile)
+      commit('setTestFormData', testform.email)
+
     }
   }
 })

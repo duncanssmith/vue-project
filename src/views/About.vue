@@ -8,5 +8,11 @@
     <ul>
       <li v-for="(data, index) in this.$store.getters.getAliases" :key='index'> {{ data.alias }}</li>
     </ul>
+    <br/>
+    <ul>
+      <li>{{ this.$store.getters.getTestFormItems.name }}</li>
+      <li>{{ this.$store.getters.getTestFormItems.mobile }}</li>
+      <li>{{ this.$store.getters.getTestFormItems.name }}</li>
+    </ul>
   </div>
 </template>

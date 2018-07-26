@@ -1,6 +1,9 @@
 <template>
   <div>
-    <test-form :fieldName='testFormFieldName'></test-form>
+    <test-form :fieldNameName='testFormFieldNameName' 
+               :fieldNameMobile='testFormFieldNameMobile'
+               :fieldNameEmail='testFormFieldNameEmail'
+               ></test-form>
     <br/>
     <test-store msg="Welcome to Your Vue.js App"></test-store>
     <br/>
@@ -24,7 +27,10 @@ export default {
   data () {
     return {
       aliasFieldName: 'Alias',
-      nameFieldName: 'Name'
+      nameFieldName: 'Name',
+      testFormFieldNameName: 'Name',
+      testFormFieldNameMobile: 'Mobile',
+      testFormFieldNameEmail: 'Email'
     }
   }
 }
