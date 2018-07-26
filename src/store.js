@@ -24,6 +24,9 @@ export default new Vuex.Store({
     setName (state, data) {
       state.name = data
     },
+    setLastName (state, data) {
+      state.lastName = data
+    },
     setAlias (state, data) {
       state.aliases.push(data)
     },
@@ -39,6 +42,9 @@ export default new Vuex.Store({
     },
     getName (state) {
       return state.name
+    },
+    getLastName (state) {
+      return state.lastName
     },
     getAliases (state) {
       return state.aliases
@@ -61,14 +67,19 @@ export default new Vuex.Store({
       let newName = param;
       commit('setName', newName.name) 
     },
+    addLastName ({state, commit}, param) {
+      console.log("Duncan 2000 ", param);
+      let newLastName = param;
+      commit('setLastName', newLastName.lastName) 
+    },
     addAlias ({state, commit}, param) {
       let newAlias = param;
       commit('setAlias', newAlias) 
     },
     removeAlias ({state, commit}, param) {
-      let alias = param;
-      console.log('removeAlias action', param, alias)
-      commit('deleteAlias', alias)
+      let id = param;
+      console.log('removeAlias action', param, id)
+      commit('deleteAlias', id)
     }
   }
 })

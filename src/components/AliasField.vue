@@ -30,7 +30,9 @@ export default {
   ],
 
   data () {
-    alias: ''
+    return {
+      alias: ''
+    }
   },
 
   name: 'Alias',
@@ -46,7 +48,7 @@ export default {
       })
     },
     removeAlias(id) {
-      this.$store.dispatch('removeAlias', {alias: this.alias})
+      this.$store.dispatch('removeAlias', id)
     }
   }
 }

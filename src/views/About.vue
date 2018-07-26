@@ -6,7 +6,7 @@
     <p>Name: {{ this.$store.getters.getName }}</p>
     <p>Aliases: </p>
     <ul>
-      <li v-for="(data, index) in this.$store.getters.getAliases" :key='index'> {{ data.alias }} {{ index }} </li>
+      <li v-for="(data, index) in this.$store.getters.getAliases" :key='index'> {{ data.alias }}</li>
     </ul>
   </div>
 </template>

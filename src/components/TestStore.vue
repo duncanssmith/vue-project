@@ -10,7 +10,6 @@
       <input type="text" v-model="lastName"/>
       <p>{{ this.$store.getters.getLastName }}</p>
     </form>
-
   </div>
 </template>
 
