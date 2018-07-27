@@ -2,8 +2,10 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
+  "licence": "SEE LICENCE IN licence.txt",
   "scripts": {
     "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint",
     "build": "vue-cli-service build"
   },
   "dependencies": {
